@@ -1,0 +1,118 @@
+.footer {
+    color: #d9d9d9;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 8vw 40px 8vw;
+    margin-top: 100px;
+}
+
+.footer-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+}
+
+.footer-content-left,
+.footer-content-center,
+.footer-content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-content-left .footer-logo {
+    width: 150px;
+}
+
+.footer-content-left li,
+.footer-content-center li,
+.footer-content-right li {
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.footer-content-left li:hover,
+.footer-content-center li:hover,
+.footer-content-right li:hover {
+    color: #ff6b01;
+}
+
+.footer-content-center h2,
+.footer-content-right h2 {
+    color: white;
+}
+
+.footer-social-icons img {
+    width: 35px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.footer-social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.footer hr {
+    width: 100%;
+    height: 2px;
+    margin: 20px 0;
+    background-color: gray;
+    border: none;
+}
+
+.footer p {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+@media (max-width: 750px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-content-left,
+    .footer-content-center,
+    .footer-content-right {
+        align-items: center;
+    }
+
+    .footer-social-icons {
+        justify-content: center;
+    }
+
+    .footer hr {
+        margin: 25px 0;
+    }
+}
+
+.footer-logo-text {
+    font-family: 'Poppins', sans-serif; /* Modern clean font */
+    font-size: 48px; /* Bigger, eye-catching */
+    font-weight: 900; /* Bold & strong */
+    background: linear-gradient(90deg, #ff6b01, #ff9a3c); /* stylish gradient */
+    -webkit-background-clip: text; /* gradient text effect */
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 3px;
+    margin: 0;
+    cursor: default;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4); /* subtle 3D shadow */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover effect to make it feel interactive & premium */
+.footer-logo-text:hover {
+    transform: scale(1.1) rotate(-2deg);
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+}
