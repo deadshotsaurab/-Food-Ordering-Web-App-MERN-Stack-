@@ -1,0 +1,141 @@
+.explore-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fff;
+  position: relative;
+}
+
+.explore-menu h1 {
+  color: #262626;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.explore-menu-text {
+  max-width: 65%;
+  color: #606060;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Wrapper with scroll buttons */
+.explore-menu-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Scrollable list */
+.explore-menu-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  gap: 35px;
+}
+
+.explore-menu-list::-webkit-scrollbar {
+  display: none;
+}
+
+.explore-menu-list-item {
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.explore-menu-list-item img {
+  width: 8vw;
+  min-width: 90px;
+  height: 8vw;
+  min-height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.explore-menu-list-item p {
+  margin-top: 10px;
+  color: #555;
+  font-size: max(1vw, 15px);
+  font-weight: 500;
+}
+
+.explore-menu-list-item:hover img {
+  transform: scale(1.1);
+}
+
+.explore-menu-list-item.active img {
+  border: 3px solid tomato;
+  box-shadow: 0 0 10px rgba(255, 99, 71, 0.4);
+}
+
+.explore-menu-list-item.active p {
+  color: tomato;
+  font-weight: 600;
+}
+
+/* HR */
+.explore-menu hr {
+  margin: 10px 0;
+  height: 2px;
+  background-color: #e2e2e2;
+  border: none;
+}
+
+/* Scroll buttons - far left/right */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  color: tomato;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.85;
+  z-index: 10;
+}
+
+.scroll-btn:hover {
+  background-color: tomato;
+  color: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.scroll-btn.left {
+  left: -20px; /* extreme left */
+}
+
+.scroll-btn.right {
+  right: -20px; /* extreme right */
+}
+
+/* Responsive */
+@media (max-width: 1050px) {
+  .explore-menu-text {
+    max-width: 90%;
+    font-size: 14px;
+  }
+
+  .scroll-btn {
+    display: none; /* hide buttons on mobile */
+  }
+
+  .explore-menu-list-item img {
+    width: 70px;
+    height: 70px;
+  }
+}
